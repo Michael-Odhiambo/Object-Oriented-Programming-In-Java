@@ -9,7 +9,8 @@ public class MVCDriver {
     public static void main( String[] args ) {
         BankAccountModel model = new BankAccountModel( 1000000.00 );
         BankAccountView view = new BankAccountView( model );
-        BankAccountCLV clv = new BankAccountCLV( model );
+        Console console = Console.INSTANCE;
+        console.setModel( model );
 
         JFrame frame = new JFrame();
 
