@@ -32,7 +32,7 @@ public class Card {
         return faceUp;
     }
 
-    public String display() {
+    public String toString() {
         return rank.toString() + suit.toString();
     }
 }

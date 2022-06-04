@@ -15,10 +15,10 @@ public class Deck {
     public void buildCards() {
         deck = new Card[ 52 ];
         Iterator suitsIterator = Suit.SUITS.iterator();
-        Iterator ranksIterator = Rank.RANKS.iterator();
         int counter = 0;
         while ( suitsIterator.hasNext() ) {
             Suit suit = ( Suit ) suitsIterator.next();
+            Iterator ranksIterator = Rank.RANKS.iterator();
             while ( ranksIterator.hasNext() ) {
                 Rank rank = ( Rank ) ranksIterator.next();
                 deck[ counter ] = new Card( suit, rank );
