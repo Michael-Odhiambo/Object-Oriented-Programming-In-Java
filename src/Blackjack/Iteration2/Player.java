@@ -38,7 +38,9 @@ public abstract class Player {
         notifyChanged();
     }
 
-    protected abstract PlayerState getInitialState();
+    protected PlayerState getInitialState() {
+        return new WaitingState();
+    }
 
     protected void notifyChanged() {
         Iterator i = listeners.iterator();
