@@ -11,7 +11,7 @@ public class Hand {
     private int numberOfAces;
 
     public Hand() {
-        // Set the holder to a blank listener so it will not be null if not externally set.
+        // Set the holder to a blank listener so that it will not be null if not externally set.
         setHolder( new HandListener() {
             public void handPlayable(){}
             public void handBlackjack(){}

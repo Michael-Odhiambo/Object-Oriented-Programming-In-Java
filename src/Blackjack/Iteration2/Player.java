@@ -149,7 +149,7 @@ public abstract class Player {
         return new BlackjackState();
     }
 
-    protected abstract boolean hit( Dealer dealer );
+    protected abstract boolean hit();
 
     private class WaitingState implements PlayerState {
 
@@ -288,7 +288,7 @@ public abstract class Player {
 
         @Override
         public void execute( Dealer dealer ) {
-            if ( hit( dealer ) )
+            if ( hit() )
                 dealer.hit( Player.this );
             else {
                 setCurrentState( getStandingState() );
